@@ -258,8 +258,6 @@ hr {
   border-radius: 0px;
   line-height: 1;
 
-  -moz-user-select: none;
-
   letter-spacing: 1px;
   line-height: 0;
   margin-bottom: 0;
@@ -358,7 +356,6 @@ hr {
   text-transform: capitalize;
 
   padding: 19px 47px;
-  -moz-user-select: none;
 
   cursor: pointer;
   display: inline-block;
@@ -520,17 +517,29 @@ hr {
   -moz-animation-name: float-bob;
   -moz-animation-duration: 2s;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
   -ms-animation-name: float-bob;
   -ms-animation-duration: 2s;
   -ms-animation-iteration-count: infinite;
-  -ms-animation-timing-function: linear;
   -o-animation-name: float-bob;
   -o-animation-duration: 2s;
   -o-animation-iteration-count: infinite;
-  -o-animation-timing-function: linear;
 }
 @-webkit-keyframes float-bob {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-bob {
   0% {
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
@@ -551,6 +560,13 @@ hr {
 }
 
 @-webkit-keyframes heartbeat {
+  to {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes heartbeat {
   to {
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
@@ -898,7 +914,7 @@ hr {
     font-weight: 300;
     margin-left: 72px;
     margin-bottom: 22px;
-    color: #f04e3c;
+    color: #03ff00;
     text-transform: uppercase;
     display: inline-block;
     position: relative;
@@ -910,7 +926,7 @@ hr {
       content: "";
       width: 50px;
       height: 2px;
-      background: #f04e3c;
+      background: #03ff00;
       top: 0;
       left: -67px;
       top: 50%;
@@ -936,8 +952,8 @@ hr {
 }
 
 .section-tittle2 {
-  span {
-  }
+  // span {
+  // }
   h2 {
     color: #fff;
     @media #{$lg} {

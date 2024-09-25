@@ -103,24 +103,6 @@
   width: 220px;
 }
 
-.responsive-iframe {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-}
-
-.responsive-iframe iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-
 /*--
     - Overlay
 ------------------------------------------*/
@@ -441,7 +423,6 @@ hr {
   font-weight: 300;
   border-radius: 0px;
   line-height: 1;
-  -moz-user-select: none;
   letter-spacing: 1px;
   line-height: 0;
   margin-bottom: 0;
@@ -543,7 +524,6 @@ hr {
   border-radius: 5px;
   text-transform: capitalize;
   padding: 19px 47px;
-  -moz-user-select: none;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -1940,19 +1920,32 @@ hr {
   -moz-animation-name: float-bob;
   -moz-animation-duration: 2s;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
   -ms-animation-name: float-bob;
   -ms-animation-duration: 2s;
   -ms-animation-iteration-count: infinite;
-  -ms-animation-timing-function: linear;
   -o-animation-name: float-bob;
   -o-animation-duration: 2s;
   -o-animation-iteration-count: infinite;
-  -o-animation-timing-function: linear;
+}
+@keyframes float-bob {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 /* heartbeat */
 .heartbeat {
   animation: heartbeat 1s infinite alternate;
+}
+@keyframes heartbeat {
+  to {
+    transform: scale(1.03);
+  }
 }
 /* rotateme */
 .rotateme {
@@ -2326,7 +2319,7 @@ hr {
   font-weight: 300;
   margin-left: 72px;
   margin-bottom: 22px;
-  color: #f04e3c;
+  color: #03ff00;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -2341,7 +2334,7 @@ hr {
   content: "";
   width: 50px;
   height: 2px;
-  background: #f04e3c;
+  background: #03ff00;
   top: 0;
   left: -67px;
   top: 50%;
@@ -2843,6 +2836,23 @@ hr {
   color: #ff1313;
 }
 
+@keyframes btnIconRipple {
+  0% {
+    border-width: 4px;
+    transform: scale(1);
+  }
+  50% {
+    border-width: 1px;
+    transform: scale(1.5);
+  }
+  80% {
+    border-width: 1px;
+    transform: scale(1.9);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .hero-overly {
   position: relative;
   z-index: 1;
@@ -3038,7 +3048,7 @@ hr {
     font-size: 19px;
   }
 }
-.services-area .single-cat .cat-cap h5 > a:Hover {
+.services-area .single-cat .cat-cap h5 > a:hover {
   color: #03ff00;
 }
 .services-area .single-cat .cat-cap p {
@@ -3075,7 +3085,7 @@ hr {
   font-family: "Teko", sans-serif;
   font-size: 16px;
   color: #fff;
-  background: #f81f1f;
+  background: #03ff00;
   font-size: 16px;
   text-transform: uppercase;
   padding: 20px 0;
@@ -3093,7 +3103,7 @@ hr {
   visibility: visible;
 }
 .services-area .single-cat:hover .cat-icon i {
-  color: #f81f1f;
+  color: #03ff00;
 }
 .services-area .single-cat.single-cat2 {
   background: #f7fbff;
