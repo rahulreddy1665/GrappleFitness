@@ -3840,33 +3840,22 @@ button.slick-arrow {
 }
 
 .gallery-area .box {
-    position: relative
+    position: relative;
 }
 
 .gallery-area .box .gallery-img {
     height: 565px;
     background-size: cover;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .gallery-area .box .big-img {
-    height: 435px
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .gallery-area .box .big-img {
-        height: 435px
-    }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .gallery-area .box .big-img {
-        height: 435px
-    }
+    height: 435px;
 }
 
 .gallery-area .box .small-img {
-    height: 435px
+    height: 435px;
 }
 
 .gallery-area .box .overlay {
@@ -3876,40 +3865,21 @@ button.slick-arrow {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     top: 0;
-    left: 0
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-area .box .overlay .overlay-content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: 0 auto
+    text-align: center;
+    padding: 20px;
 }
 
 .gallery-area .box .overlay .overlay-content h3 {
     color: #ffffff;
     font-size: 40px;
-    margin: 0
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
-    .gallery-area .box .overlay .overlay-content h3 {
-        font-size: 32px
-    }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .gallery-area .box .overlay .overlay-content h3 {
-        font-size: 32px
-    }
-}
-
-@media (max-width: 575px) {
-    .gallery-area .box .overlay .overlay-content h3 {
-        font-size: 32px
-    }
+    margin: 0;
 }
 
 .gallery-area .box .overlay .overlay-content a {
@@ -3923,27 +3893,62 @@ button.slick-arrow {
     border-radius: 50%;
     transform: rotate(45deg) !important;
     margin-bottom: 30px;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .gallery-area .box .overlay .overlay-content a i {
     position: relative;
-    bottom: -2px
+    bottom: -2px;
 }
 
 .gallery-area .box .overlay .overlay-content a:hover {
     background: #fff;
-    color: #03ff00
+    color: #03ff00;
 }
 
 .gallery-area .box .overlay .overlay-content p {
-    color: #fff
+    color: #fff;
 }
 
-.gallery-area .box.snake {
-    position: relative;
-    overflow: hidden
+/* Hide overlay and adjust image on mobile */
+@media (max-width: 767px) {
+
+    .gallery-area .box {
+        margin-bottom: 10px;
+
+    }
+
+    .gallery-area .box .gallery-img {
+        background-size: contain;
+        overflow: hidden;
+        height: 250px;
+    }
+
+    .gallery-area .box .overlay {
+        display: none;
+    }
 }
+
+/* Adjustments for tablet and small screens */
+@media (max-width: 991px) {
+    .gallery-area .box {
+        margin-bottom: 10px;
+    }
+
+    .gallery-area .box .gallery-img {
+        background-size: contain;
+        height: 300px;
+    }
+
+    .gallery-area .box .overlay .overlay-content h3 {
+        font-size: 24px;
+    }
+
+    .gallery-area .box .overlay .overlay-content p {
+        font-size: 14px;
+    }
+}
+
 
 .box {
     position: relative
