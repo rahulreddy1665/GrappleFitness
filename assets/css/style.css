@@ -3850,7 +3850,7 @@ button.slick-arrow {
 }
 
 .gallery-area .box .big-img {
-    height: 900px
+    height: 435px
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3914,7 +3914,7 @@ button.slick-arrow {
 
 .gallery-area .box .overlay .overlay-content a {
     color: #fff;
-    background: #ff0000;
+    background: #03ff00;
     width: 60px;
     height: 60px;
     display: inline-block;
@@ -3933,7 +3933,7 @@ button.slick-arrow {
 
 .gallery-area .box .overlay .overlay-content a:hover {
     background: #fff;
-    color: #ff0000
+    color: #03ff00
 }
 
 .gallery-area .box .overlay .overlay-content p {
