@@ -7255,8 +7255,8 @@ del {
 
 .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 110px;
+    right: 480px;
     color: red;
     font-size: 30px;
     font-weight: bold;
