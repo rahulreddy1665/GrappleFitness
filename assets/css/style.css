@@ -3924,9 +3924,9 @@ button.slick-arrow {
         height: 250px;
     }
 
-    .gallery-area .box .overlay {
+    /* .gallery-area .box .overlay {
         display: none;
-    }
+    } */
 }
 
 /* Adjustments for tablet and small screens */
@@ -4071,7 +4071,14 @@ button.slick-arrow {
     transition: .4s
 }
 
+.team-area .single-team:hover .team-caption {
+    background: linear-gradient(to top, rgba(3, 255, 0, 1), rgba(0, 0, 0, 0.3));
+    /* Adjust gradient on hover */
+    bottom: 0;
+}
+
 .team-area .single-team .team-caption h3 {
+    color: #fff;
     margin-bottom: 22px;
     line-height: 13px;
     font-family: "Barlow", sans-serif
@@ -4079,7 +4086,7 @@ button.slick-arrow {
 
 .team-area .single-team .team-caption h3 a {
     color: #fff;
-    font-weight: 700;
+    font-weight: 'bold';
     font-size: 20px
 }
 
@@ -4088,7 +4095,7 @@ button.slick-arrow {
 }
 
 .team-area .single-team .team-caption span {
-    color: #959595;
+    color: #3d3d3d;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -7255,12 +7262,18 @@ del {
 
 .close {
     position: absolute;
-    top: 110px;
-    right: 480px;
+    top: calc(50% - 200px - 20px);
+    /* Center vertically and move above modal-content */
+    left: calc(50% + 200px - 10px);
+    /* Center horizontally and move to the right of modal-content */
     color: red;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 1001;
+    /* Ensure it stays above modal-content */
+    transform: translate(-50%, -50%);
+    /* Fine-tune position for better responsiveness */
 }
 
 @media (max-width: 576px) {
